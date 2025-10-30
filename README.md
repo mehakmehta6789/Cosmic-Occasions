@@ -9,5 +9,5 @@ Frontend: HTML, CSS, JavaScript
 Backend: Node.js, Express.js
 # Clone the repository  
 ```bash
-https://github.com/mehakmehta6789/Backend_express.git
+https://github.com/mehakmehta6789/Cosmic-Occasions.git
 
