@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baskervville+SC&family=Fraunces:ital,wght@0,100..900;1,100..900&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/expense-tracker.css">
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+
+  <title>Expense Tracker</title>
+</head>
+<body>
+  <div class="container1">
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-sm sticky-top navbar-dark" style="background-color:#6c7d5a;">
+      <div class="container-fluid">
+        <a class="navbar-brand d-md-none" href="/home">
+          <img src="/images/logo.png" alt="Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item"><a class="nav-link active" href="/home">HOME</a></li>
+            <li class="nav-item"><a class="nav-link" href="/about">ABOUT</a></li>
+            <a class="navbar-brand d-none d-md-block" href="/home">
+              <img src="Black_And_White_Aesthetic_Minimalist_Modern_Simple_Typography_Coconut_Cosmetics_Logo__1_-removebg-preview (1).png" alt="Logo">
+            </a>
+            <li class="nav-item"><a class="nav-link" href="/portfolio">PORTFOLIO</a></li>
+            <li class="nav-item"><a class="nav-link" href="/contact">CONTACT</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- MAIN -->
+    <main><br><br>
+      <div class="container center">
+        <div class="balanceHead">
+          <div class="balance">
+            <p>My Balance</p>
+            <h1 id="balanceVal">₹ 000</h1>
+          </div>
+          <img src="/images/logo.svg" alt="">
+        </div>
+
+        <!-- BUDGET Form -->
+        <div class="formContainer">
+          <h3>ADD BUDGET</h3>
+          <div class="budgetInput">
+            <input type="number" placeholder="Enter Amount in Numbers, e.g.5000" id="budget">
+            <button id="addBudgetBtn">Add Budget</button>
+          </div>
+
+          <!-- Expense Form -->
+          <h3>ADD EXPENSE</h3>
+          <form class="expenseInput" id="expenseForm">
+            <select name="category" required>
+              <option value="" selected hidden disabled>Description</option>
+              <option value="Venue">Venue</option>
+              <option value="Equipments">Equipments</option>
+              <option value="Decor">Decor</option>
+              <option value="Catering">Catering</option>
+              <option value="Transportation">Transportation</option>
+              <option value="Team and staff">Team and staff</option>
+              <option value="Miscellaneous">Miscellaneous</option>
+            </select>
+
+            <input type="number" placeholder="Enter Amount" name="amount" required>
+            <input type="date" name="date" required>
+            <button type="submit">Add Expense</button>
+          </form>
+        </div>
+
+        <!-- Overview -->
+        <div class="overview balanceHead">
+          <div>
+            <p>Total Budget</p>
+            <h1 id="total">₹ 000</h1>
+          </div>
+          <div>
+            <p>Expenses</p>
+            <h1 id="expense">₹ 000</h1>
+          </div>
+        </div>
+
+        <!-- Expense Table -->
+        <div class="expenseList formContainer">
+          <h2>Expense List</h2>
+          <table id="abc">
+            <thead id="yz">
+              <tr id="op">
+                <td id="lk">Description</td>
+                <td id="lk">Amount</td>
+                <td id="lk">Date</td>
+                <td id="lk"></td>
+              </tr>
+            </thead>
+            <tbody id="expenseList"></tbody>
+          </table>
+        </div>
+      </div><br><br>
+    </main>
+
+    <!-- FOOTER -->
+    <div class="logo-container">
+      <div class="line"></div>
+      <div class="logo">
+        <img src="Black_And_White_Aesthetic_Minimalist_Modern_Simple_Typography_Coconut_Cosmetics_Logo__1_-removebg-preview (1).png">
+      </div>
+      <div class="line"></div>
+    </div>
+
+    <footer>
+      <table>
+        <tr>
+          <td id="one">
+            <ul id="link">
+              <li><a href="/portfolio">PORTFOLIO</a></li>
+              <li><a href="/services">SERVICES</a></li>
+              <li><a href="/about">ABOUT</a></li>
+              <li><a href="/expense-tracker">EXPENSE TRACKER</a></li>
+              <li><a href="/dashboard">DASHBOARD</a></li>
+            </ul>
+          </td>
+          <td></td>
+          <td id="two">
+            <div class="next">
+              <p>Destination weddings & events worldwide.</p>
+              <h6>join us @cosmic_occasions</h6><br><br><br>
+              <h7>© 2019 Cosmic Occasions. All Rights Reserved.</h7>
+            </div>
+          </td>
+          <td></td>
+          <td id="three">
+            <img src="COSMIC_OCCASSIONS-removebg-preview.png" id="lg"><br><br>
+            <a href="/contact" id="button">CONTACT</a>
+          </td>
+        </tr>
+      </table>
+    </footer>
+  </div>
+
+  <!-- ✅ Script to handle expense submission dynamically (no redirect) -->
+  <!-- Keep your full existing HTML same — only replace the script at the bottom -->
+
+<script>
+  const expenseForm = document.getElementById('expenseForm');
+  const expenseList = document.getElementById('expenseList');
+  const addBudgetBtn = document.getElementById('addBudgetBtn');
+  const budgetInput = document.getElementById('budget');
+  const totalDisplay = document.getElementById('total');
+  const expenseDisplay = document.getElementById('expense');
+  const balanceDisplay = document.getElementById('balanceVal');
+
+  let totalBudget = 0;
+  let totalExpenses = 0;
+
+  // ✅ Add Budget Functionality
+  addBudgetBtn.addEventListener('click', () => {
+    const budgetVal = Number(budgetInput.value);
+    if (!budgetVal || budgetVal <= 0) return;
+    totalBudget += budgetVal;
+    totalDisplay.textContent = `₹ ${totalBudget}`;
+    updateBalance();
+    budgetInput.value = '';
+  });
+
+  // ✅ Add Expense Functionality (Frontend + MongoDB)
+  expenseForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(expenseForm);
+    const data = Object.fromEntries(formData.entries());
+
+    // Show immediately in UI
+    addExpenseToUI(data);
+    totalExpenses += Number(data.amount);
+    expenseDisplay.textContent = `₹ ${totalExpenses}`;
+    updateBalance();
+
+    // Send to backend (if exists)
+    try {
+      await fetch('/expense-submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+    } catch (err) {
+      console.error('Server error:', err);
+    }
+
+    expenseForm.reset();
+  });
+
+  // ✅ Add Expense to UI instantly
+  function addExpenseToUI(expense) {
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td>${expense.category}</td>
+      <td>₹ ${expense.amount}</td>
+      <td>${new Date(expense.date).toLocaleDateString()}</td>
+      <td><button class="removebtn">×</button></td>
+    `;
+    expenseList.appendChild(tr);
+
+    // Delete handler
+    tr.querySelector('.removebtn').addEventListener('click', () => {
+      tr.remove();
+      totalExpenses -= Number(expense.amount);
+      expenseDisplay.textContent = `₹ ${totalExpenses}`;
+      updateBalance();
+    });
+  }
+
+  // ✅ Update Balance
+  function updateBalance() {
+    const balance = totalBudget - totalExpenses;
+    balanceDisplay.textContent = `₹ ${balance >= 0 ? balance : 0}`;
+  }
+</script>
+
+
+
+</body>
+</html>
