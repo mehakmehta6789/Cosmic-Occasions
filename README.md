@@ -8,7 +8,7 @@ Cosmic Occasions is a comprehensive event management platform that streamlines t
 ## 🎥 Project Demo Video
 
 <small>You can watch the demo of my project here:</small>  
-🔗 <small>https://drive.google.com/file/d/15a-udnEeunDZc4AnFsWnh5CUp3Eop02A/view?usp=sharing</small>
+🔗 <small>https://drive.google.com/file/d/1x6Jx8E4yiSSuVOzgwUvCuPayW9wuzk0t/view?usp=sharing</small>
 # Technologies
 Frontend: HTML, CSS, JavaScript
 Backend: Node.js, Express.js
